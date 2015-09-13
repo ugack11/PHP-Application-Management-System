@@ -5,11 +5,13 @@ $password = $_POST["password"];
 $account = $_POST["account"];
 $logincheck;
 $errorMessage;
-$loginAttempts = 0;
-//$loginAttempts.=$_SESSION['loginAttempts'];
+session_start();
+if (!isset($_SESSION['loginAttempts']))
+    $_SESSION['loginAttempts'] = 0;
+
 $url;
 
-if($loginAttempts > 2) {		//exceeded logins
+if($_SESSION['loginAttempts'] > 2) {		//exceeded logins
 
     $errorMessage = "<div><p>Error: Number of Login Attempts Exceeded</p></div>";
     session_start();
@@ -47,13 +49,8 @@ if($loginAttempts > 2) {		//exceeded logins
                 header('Location: settingsC.php');
             }
         } else {
-            session_start();
-            $loginAttempts++;
-            //$foo = $_SESSION['loginAttempts'];
-            settype($foo, "integer");
-            //$foo.=$loginAttempts;
-            $errorMessage = "Error: Unrecognized Username or Password, You have " . (3 - $loginAttempts) . " Login Attempts Left";
-
+            $_SESSION['loginAttempts'] ++;
+            $errorMessage = "Error: Unrecognized Username or Password, You have " . (3 - $_SESSION['loginAttempts']) . " Login Attempts Left";
             $_SESSION['errorMessage'] = $errorMessage;
             header('Location: ../index.php');
         }
