@@ -16,132 +16,167 @@ class Profile
 	private $email;
 	private $application;
 
-	public function __construct($userName,$userPassword,$userType){
+	public function __construct($userName,$userPassword,$userType)
+    {
 	$this->username = $userName;
 	$this->password = $userPassword;
 	$this->type = $userType;
 
 	}
 
-	public function getUsername(){
+	public function getUsername()
+    {
 		return $this->username;
 	}
 
-	public function setUsername($userName){
+	public function setUsername($userName)
+    {
 		$this->username = $userName;
 		return $this;
 	}
 
-	public function getPassword(){
+	public function getPassword()
+    {
 		return $this->password;
 	}
 
-	public function setPassword($userPassword){
+	public function setPassword($userPassword)
+    {
 		$this->password = $userPassword;
 		return $this;
 	}
 
-	public function getType(){
+	public function getType()
+    {
 		return $this->type;
 	}
 
-	public function setType($userType){
+	public function setType($userType)
+    {
 		 $this->type = $userType;
 		 return $this;
 	}
 
-	public function getFirstName(){
+	public function getFirstName()
+    {
 		return $this->fName;
 	}
 
-	public function setFirstName($fName){
+	public function setFirstName($fName)
+    {
 		$this->fName = $fName;
 		return $this;
 	}
 
-	public function getLastName(){
+	public function getLastName()
+    {
 		return $this->lName;
 	}
 
-	public function setLastName($lName){
+	public function setLastName($lName)
+    {
 		$this->lName = $lName;
 		return $this;
 	}
-	public function getSex(){
+    
+	public function getSex()
+    {
 		return $this->sex;
 	}
 
-	public function setSex($sex){
+	public function setSex($sex)
+    {
 		$this->sex = $sex;
 		return $this;
 	}
-	public function getBirthDate(){
+    
+	public function getBirthDate()
+    {
 		return $this->birthdate;
 	}
 
-	public function setBirthDate($birthdate){
+	public function setBirthDate($birthdate)
+    {
 		$this->birthdate = $birthdate;
 		return $this;
 	}
-	public function getMAddress(){
+    
+	public function getMAddress()
+    {
 		return $this->maddress;
 	}
 
-	public function setMAddress($maddress){
+	public function setMAddress($maddress)
+    {
 		$this->maddress = $maddress;
 		return $this;
 	}
-	public function getCity(){
+    
+	public function getCity()
+    {
 		return $this->city;
 	}
 
-	public function setCity($city){
+	public function setCity($city)
+    {
 		$this->city = $city;
 		return $this;
 	}
-	public function getState(){
+    
+	public function getState()
+    {
 		return $this->state;
 	}
 
-	public function setState($state){
+	public function setState($state)
+    {
 		$this->state = $state;
 		return $this;
 	}
-	public function getZipCode(){
+    
+	public function getZipCode()
+    {
 		return $this->zipcode;
 	}
 
-	public function setZipCode($zipcode){
+	public function setZipCode($zipcode)
+    {
 		$this->zipcode = $zipcode;
 		return $this;
 	}
-	public function getTelephone(){
+    
+	public function getTelephone()
+    {
 		return $this->telephone;
 	}
 
-	public function setTelephone($telephone){
+	public function setTelephone($telephone)
+    {
 		$this->telphone = $telephone;
 		return $this;
 	}
 
-	public function getEmail(){
+	public function getEmail()
+    {
 		return $this->email;
 	}
 
-	public function setEmail($email){
+	public function setEmail($email)
+    {
 		$this->email = $email;
 		return $this;
 	}
-	public function getApplication(){
+    
+	public function getApplication()
+    {
 		return $this->application;
 	}
 
-	public function setApplication($application){
+	public function setApplication($application)
+    {
 		$this->application = $application;
 		return $this;
 	}
-
 }
-
 
 ?>

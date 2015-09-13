@@ -66,18 +66,19 @@ h2 {
     margin-left: 10px;
     text-align: right;
     margin-right:15px;
-    float:left;    
+    float:left;
 }
-#settingForm div input{	
+
+#settingForm div input{
     height: 20px;
     width: 300px;
     border: 1px solid #000;
     margin-top: 10px;
 }
+
 #application{
     position: relative;
     text-align:center;
     top:-130px;
     left:135px;
   }
-
